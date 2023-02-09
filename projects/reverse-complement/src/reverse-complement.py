@@ -1,4 +1,4 @@
-oli'''
+oli uwu '''
 NAME
 	reverse-complement.py
     
