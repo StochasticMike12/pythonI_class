@@ -1,4 +1,4 @@
-oli uwu '''
+pito'''
 NAME
 	reverse-complement.py
     
