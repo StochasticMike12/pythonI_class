@@ -1,4 +1,4 @@
-pito'''
+'''
 NAME
 	reverse-complement.py
     
