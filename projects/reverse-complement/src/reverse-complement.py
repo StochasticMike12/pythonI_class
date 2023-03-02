@@ -7,7 +7,7 @@ VERSION
     1.0
     
 AUTHOR
-	io :3
+	io OwO
     
 DESCRIPTION
 	Make the reverse complement of DNA sequence
