@@ -1,4 +1,5 @@
 # Reporte de la tarea 1: Git y gitHub : add, commits
+
 Flores Varela Miguel Ángel
 28 de febrero de 2023
 
@@ -24,7 +25,9 @@ Git es una herramienta importante para el manejo de versiones de archivos, lo cu
 `git status`
 
 
-## Resultados obtenidos
+## Resultados obtenido
+
+```
 +--- reverse-complement
 |   +--- data
 |   |   +--- e_coli.fasta
@@ -34,7 +37,7 @@ Git es una herramienta importante para el manejo de versiones de archivos, lo cu
 |   +--- lib
 |   +--- src
 |   |   +--- reverse-complement.py
-
+```
 
 
 ## Análisis y conclusiones
