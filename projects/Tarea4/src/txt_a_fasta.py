@@ -1,6 +1,6 @@
 '''
 NAME
-     posicion_codones.py 
+     txt_a_fasta.py 
 
 VERSION
         1.0
@@ -16,7 +16,7 @@ CATEGORY
 
 USAGE
 
-    % py posicion_codones.py
+    % py txt_a_fasta.py
     
     
 '''
@@ -26,4 +26,5 @@ USAGE
 # ===========================================================================
 
 
-# step
+# step 1.
+
