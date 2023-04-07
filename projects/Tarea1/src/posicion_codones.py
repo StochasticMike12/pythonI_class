@@ -9,7 +9,7 @@ AUTHOR
         Miguel Ángel Flores Varela
 
 DESCRIPTION
-        Este programa arroja ciertas posiciones en especpifico dentro de una secuencia de DNA.
+        Este programa arroja ciertas posiciones en específico dentro de una secuencia de DNA.
 
 CATEGORY
         Genómica
