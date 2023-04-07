@@ -41,7 +41,7 @@ print("\nIntroduce el nombre de la secuencia que desees convertir a formato FAST
 nombre_secuencia = input()
 
 # Preguntamos qué nombre se desea que contenga el archivo FASTA.
-print("\nIntroduce el nombre que desees que tenga que archivo FASTA:", end=" ")
+print("\nIntroduce el nombre que desees que tenga que archivo FASTA (sin la extensión .fasta):", end=" ")
 
 # Guardamos el nombre del archivo FASTA  en una variable para nobarlo posteriormente.
 nombre_fasta = input()
@@ -72,4 +72,4 @@ archivo_fasta.write(">" + nombre_secuencia + "\n" + secuencia_dna)
 archivo_fasta.close()
 
 # Imprimimos un mensaje que indique que el archivo se ha creado exitosamente.
-print("\nEl archivo e creó exitosamente en la siguiente ruta: " + ruta_completa_fasta + "\n\n");  
+print("\nEl archivo se creó exitosamente en la siguiente ruta: " + ruta_completa_fasta + "\n\n");  
