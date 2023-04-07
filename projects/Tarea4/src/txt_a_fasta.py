@@ -55,8 +55,8 @@ ruta_fasta = input()
 # Abrimos el archivo de texto con la opción de solo lectura.
 archivo_txt = open(ruta_archivo, "r")
 
-# Accedemos al contenido del archivo de texto y lo guardamos en una variabe para incertarlo en el archivo FASTA posteriormente.
-secuencia_dna = archivo_txt.read()
+# Accedemos al contenido del archivo de texto y lo guardamos en una variabe para incertarlo en el archivo FASTA posteriormente y luego removemos saltos de línea que puedan encontrarse al final de la cadena.
+secuencia_dna = archivo_txt.read().rstrip("\n")
 
 # Cerramos el archivo de texto.
 archivo_txt.close()

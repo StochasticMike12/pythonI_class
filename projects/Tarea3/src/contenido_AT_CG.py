@@ -37,8 +37,8 @@ ruta_archivo = input()
 # Abrimos el archivo con la opción de solo lectura.
 archivo = open(ruta_archivo, "r")
 
-# Accedemos al contenido del archivo para leerlo.
-dna = archivo.read()
+# Accedemos al contenido del archivo para leerlo y removemos saltos de línea que puedan encontrarse al final de la cadena.
+dna = archivo.read().rstrip("\n")
 
 # Obtenemos la longitud de la secuencia contenida en el archivo.
 longitud_dna = len(dna)
