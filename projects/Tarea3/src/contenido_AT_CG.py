@@ -29,7 +29,7 @@ USAGE
 # step 1.
 
 # Preguntamos la ruta del archivo que contiene la secuencia de DNA.
-print("\nIntroduce la ruta del archivo con la secuencia de DNA: ", end=" ")
+print("\nIntroduce la ruta del archivo con la secuencia de DNA:", end=" ")
 
 # Guardamos la ruta del archivo en una variable para poder acceder a cualquier archivo que se desee cada vez que se abra el programa.
 ruta_archivo = input()
@@ -52,7 +52,7 @@ porcentaje_AT = (100*AT)/longitud_dna
 porcentaje_GC = (100*GC)/longitud_dna
 
 # Imprimimos la ruta del archivo y el porcentaje de ATs y GCs.
-print("\n\n\nArchivo de secuencia:",ruta_archivo, "\n\nPorcentaje de AT y GC:\n\nAT:", porcentaje_AT, "%\n\nGC:", porcentaje_GC, "%\n\n\n")
+print("\n\n\nArchivo de secuencia: " + ruta_archivo + "\n\nPorcentaje de AT y GC:\n\nAT:", porcentaje_AT, "%\n\nGC:", porcentaje_GC, "%\n\n\n")
 
 # Cerramos el archivo que contiene la secuencia de DNA.
 archivo.close()
