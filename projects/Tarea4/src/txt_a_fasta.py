@@ -63,3 +63,4 @@ archivo_fasta.write(">" + nombre_secuencia + "\n" + secuencia_dna)
 archivo_fasta.close()
 
 print("\nEl archivo se creó exitosamente en la siguiente ruta: " + ruta_completa_fasta + "\n\n"); 
+
