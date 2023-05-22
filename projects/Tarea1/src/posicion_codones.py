@@ -28,11 +28,36 @@ USAGE
 
 # step 1.
 
-# Guardar la secuencia de DNA, el codón de inicio y el codón de final en una variable cada uno.
-secuencia="AAGGTACGTCGCGCGTTATTAGCCTAAT"
-c_inicio="TAC"
-c_termino="ATT"
 
-# Imprimir la secuencia, la posición donde comienza el codón de inicio y la posición donde termina el codón de terminación.
-print("\nSecuencia de DNA: AAGGTACGTCGCGCGTTATTAGCCTAAT\n\nPosición del codon de inicio:", secuencia.find(c_inicio), "\n\nPosición donde termina el codón de paro: ", secuencia.find(c_termino)+2, "\n\nFragmento que será RNA es: TACGTCGCGCGTT\n")
+# Pedir la secuencia de DNA y los codones a buscar.
 
+print("\n\nIntroduce una secuencia de DNA:")
+secuencia=input()
+
+print("\n\nIntroduce el codón de incio que desees buscar:")
+c_inicio=input()
+
+print("\n\nIntroduce el codón de término que desees buscar:")
+c_termino=input()
+
+
+
+# Obtener posiciones de codones y obtener el transcrito.
+
+p_c_inicio=secuencia.find(c_inicio)
+sec_1=secuencia[p_c_inicio:]
+
+p_c_termino=sec_1.find(c_termino)+3
+sec_2=sec_1[:p_c_termino]
+
+transcrito_1=sec_2.replace('A','u').replace('T','a').replace('C','g').replace('G','c')
+transcrito_2=transcrito_1.upper()
+
+
+
+# Imprimir inforación correspondiente
+
+print("\nSecuencia de DNA:", secuencia)
+print("\n\nPosición del codon de inicio:", p_c_inicio) 
+print("\n\nPosición donde termina el codón de paro: ", p_c_termino) 
+print("\n\nFragmento que será RNA es:", transcrito_2, "\n")
