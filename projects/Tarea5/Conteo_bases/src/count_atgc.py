@@ -33,30 +33,33 @@ USAGE
 import re
 
 
-# Abrir archivo y extraer información del archivo de entrada.
+# Pedir el pad del archivo
 
-print("\nIntroduce la ruta del archivo que desee abrir:", end=" ")
-ruta_archivo = input()
+ruta_archivo = input('Introduce la ruta del archivo que desee abrir: ')
+
+
+# Verificar que el archivo exista.
+
 try:
     archivo = open(ruta_archivo, "r")
     secuencia = archivo.read().rstrip("\n")
-    if not secuencia[]:
+    
+    # Verificar que el archivo no esté vacío.
+    if not secuencia:
         print("El archivo está vacío.")
         archivo.close()
+    
+    # Verificar que al archivo contenga solo As, Ts, Gs y Cs.
     elif re.search(r"[ATGC]", secuencia):
         if re.search(r"[^ATGC]", secuencia): 
+            print("El archivo contiene caracteres no válidos.")
             archivo.close()
         else:
-        A=secuencia.count('A')
-        T=secuencia.count('T')
-        C=secuencia.count('C')
-        G=secuencia.count('G')
-        archivo.close()
+            A=secuencia.count('A')
+            T=secuencia.count('T')
+            C=secuencia.count('C')
+            G=secuencia.count('G')
+            archivo.close()
+            print("\n\nEl total por base es:\n\nA:", A,"\nT:", T,"\nC:", C,"\nG:", G,"\n")
 except IOError:
     print("No se encontró el archivo.")
-
-
-
-# Imprimimos el total de cada base nitrogenada.
-
-print("\n\nEl total por base es:\n\nA:", A,"\nT:", T,"\nC:", C,"\nG:", G,"\n")
