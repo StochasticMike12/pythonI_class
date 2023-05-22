@@ -28,9 +28,21 @@ USAGE
 
 # step 1.
 
+
 # Primero indicamos al usuario que introduzca una secuencia de DNA que desee.
+
 print("\nIntroduce la secuencia de DNA:", end=" ")
 secuencia=input()
 
-# Imprimimos el número de bases nitrogenadas en la secuencia utilizando la función .count.
-print("\n\nEl total por base es:\n\nA:",secuencia.count('A'),"\nT:",secuencia.count('T'),"\nC:",secuencia.count('C'),"\nG:",secuencia.count('G'),"\n")
+
+# Obtenemos el número de cada base nitrogenada en la secuencia.
+
+A=secuencia.count('A')
+T=secuencia.count('T')
+C=secuencia.count('C')
+G=secuencia.count('G')
+
+
+# Imprimimos el total de cada base nitrogenada.
+
+print("\n\nEl total por base es:\n\nA:", A,"\nT:", T,"\nC:", C,"\nG:", G,"\n")
