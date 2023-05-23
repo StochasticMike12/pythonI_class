@@ -54,6 +54,8 @@ try:
         if re.search(r"[^ATGC]", secuencia): 
             print("El archivo contiene caracteres no válidos.")
             archivo.close()
+        
+        # Contar bases nitrogenadas.
         else:
             A=secuencia.count('A')
             T=secuencia.count('T')
