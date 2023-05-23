@@ -63,5 +63,7 @@ try:
             G=secuencia.count('G')
             archivo.close()
             print("\n\nEl total por base es:\n\nA:", A,"\nT:", T,"\nC:", C,"\nG:", G,"\n")
+    else:
+        print("El archivo no contiene una secuencia de DNA.")
 except IOError:
     print("No se encontró el archivo.")

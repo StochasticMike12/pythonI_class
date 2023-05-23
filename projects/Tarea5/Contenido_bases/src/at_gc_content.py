@@ -1,6 +1,6 @@
 '''
 NAME
-     contenido_AT_CG.py 
+     at_gc_content.py 
 
 VERSION
         1.0
@@ -17,7 +17,7 @@ CATEGORY
 
 USAGE
 
-    % py contenido_AT_CG.py
+    % py at_gc_content.py
     
     
 '''
@@ -66,7 +66,9 @@ try:
             porcentaje_GC = (100*GC)/longitud_dna
             print("\n\n\nArchivo de secuencia: " + ruta_archivo) 
             print("\nPorcentaje de AT y GC:\n")
-            print("AT:", porcentaje_AT, "%\n\nGC:", porcentaje_GC, "%\n\n\n")          
+            print("AT:", porcentaje_AT, "%\n\nGC:", porcentaje_GC, "%\n\n\n") 
+    else:
+        print("El archivo no contiene una secuencia de DNA.")         
 except IOError:
     print("No se encontró el archivo.")
 

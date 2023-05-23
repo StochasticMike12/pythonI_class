@@ -78,6 +78,7 @@ try:
           archivo_fasta.write(">" + nombre_secuencia + "\n" + secuencia)
           archivo_fasta.close()
           archivo.close()
-
+    else:
+        print("El archivo no contiene una secuencia de DNA.")
 except IOError:
     print("No se encontró el archivo.")

@@ -5,8 +5,7 @@ Flores Varela Miguel Ángel 29 de marzo de 2023
 ### Introducción
 
 Los archivos FASTA son muy utilizados en biología, en ellos se guardan secuencias de DNA, RNA o proteínas. 
-Este tipo de archivos son de mucha utilidad en bioinformática, por lo que es necesario saber cómo realizarlos, debido a esto, 
-esta tarea tiene la finalidad de crear archivos FASTA a partir de un archivo de texto plano que contiene una secuencia de DNA.
+Este tipo de archivos son de mucha utilidad en bioinformática, por lo que es necesario saber cómo realizarlos, debido a esto, esta tarea tiene la finalidad de crear archivos FASTA a partir de un archivo de texto plano que contiene una secuencia de DNA.
 
 ### Metodología
 
@@ -65,5 +64,3 @@ Descripción:
 Input: 
 Output: 
 Descripción:
-
-
