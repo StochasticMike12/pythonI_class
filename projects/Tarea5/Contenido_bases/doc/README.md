@@ -27,7 +27,7 @@ Descripción:
 1. Se ejecuta el programa desde linea de comando
 
 ```{python}
-py count_atgc.py.py
+py at_gc_content.py
 ```
 
 2. El programa pedirá lo siguiente:
@@ -55,7 +55,7 @@ Descripción:
 1. Se ejecuta el programa desde linea de comando
 
 ```{python}
-py count_atgc.py.py
+py at_gc_content.py
 ```
 
 2. El programa pedirá lo siguiente:
@@ -79,7 +79,7 @@ Descripción:
 1. Se ejecuta el programa desde linea de comando
 
 ```{python}
-py count_atgc.py.py
+py at_gc_content.py
 ```
 
 2. El programa pedirá lo siguiente:
@@ -103,7 +103,7 @@ Descripción:
 1. Se ejecuta el programa desde linea de comando
 
 ```{python}
-py count_atgc.py.py
+py at_gc_content.py
 ```
 
 2. El programa pedirá lo siguiente:
@@ -127,7 +127,7 @@ Descripción:
 1. Se ejecuta el programa desde linea de comando
 
 ```{python}
-py count_atgc.py.py
+py at_gc_content.py
 ```
 
 2. El programa pedirá lo siguiente:
@@ -141,4 +141,3 @@ Introduce la ruta del archivo que desee abrir: ..\data\dna.txt
 ```
 No se encontró el archivo.
 ```
-

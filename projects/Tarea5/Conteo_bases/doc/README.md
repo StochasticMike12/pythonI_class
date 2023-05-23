@@ -142,4 +142,3 @@ Introduce la ruta del archivo que desee abrir: ..\data\dna.txt
 ```
 No se encontró el archivo.
 ```
-
