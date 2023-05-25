@@ -19,6 +19,10 @@ El programa esta implementado en python, y sigue el sig algoritmo
 6. Se guarda la secuencia en el archivo de salida
 
 
+### Instalación
+Solo se necesta tener python instalado, preferentemente la útima versión.
+
+
 ### Pruebas
 
 #### Caso 1: El archivo de secuencia de entrada existe, no está vacío y contiene solo As, Ts, Gs y Cs.
