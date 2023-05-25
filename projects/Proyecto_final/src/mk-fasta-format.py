@@ -3,10 +3,14 @@ NAME
      mk-fasta-format.py 
 
 VERSION
-        1.0
+        2.0
 
 AUTHOR
         Miguel Ángel Flores Varela
+
+CONTACT
+
+        mfvarela@lcg.unam.mx
 
 DESCRIPTION
 
@@ -24,7 +28,7 @@ CATEGORY
 
 USAGE
 
-    % py mk-fasta-format.py
+    % py mk-fasta-format.py <input_file_name> <sequence_name> <output_fasta_name> <fasta_path>
    
   
   
