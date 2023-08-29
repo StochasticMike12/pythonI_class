@@ -1,4 +1,4 @@
-# gython1
+# lython1
 Este es un repositorio con fines académicos dedicado al desarrollo de código en python para labores bioinformáticas.
 # Autor
 ### Miguel Ángel Flores Varela
