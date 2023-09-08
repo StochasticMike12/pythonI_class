@@ -1,5 +1,6 @@
 # Python_class
-Este es un repositorio con fines académicos dedicado al desarrollo de código en python para labores bioinformáticas.
-# Autor
+Este repositorio ha sido creado para el curso de Biopython del tercer semestre de la Licenciatura en Ciencias Genómicas. Tiene como objetivo contener programas desarrollados en python para  analizar y procesar datos biológicos como parte de la labor bioinformática. 
+## Autor
 ### Miguel Ángel Flores Varela
-Sobre mí: soy un estudiante no graduado de Ciecnias Genómicas en el Centro de Ciencias Genómicas en la UNAM, realizo este repositorio para la clase de programación en python. 
+Estudiante del tercer semestre de la Licenciatura en Ciencias Genómicas de la UNAM.
+*Anexar imágen*
