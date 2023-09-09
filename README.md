@@ -6,3 +6,12 @@ Este repositorio ha sido creado para el curso de Biopython del tercer semestre d
 ### Miguel Ángel Flores Varela
 <img src="https://github.com/StochasticMike12/python_class/blob/develop/multimedia/autor.jpg" width="240" height="240"> 
 Estudiante del tercer semestre de la Licenciatura en Ciencias Genómicas de la UNAM.
+
+## índice de programas
+| Programa  | Descripción | Link |
+| -- | -- | -- |
+| contenido_AT_CG.py | ... | https://acortar.link/RXzJ5n |
+| conteo_bases,py | ... | https://acortar.link/EhYXkI |
+| piedra-papel-tijera.py | ... | https://acortar.link/tvRL9G |
+| posicion_codones | ... | https://acortar.link/3t5PoB |
+| txt_a_fasta | ... | https://acortar.link/54L8yV |
