@@ -9,7 +9,7 @@ Pyhon nos permite realizar múltiples cosas, tales como generar valores aleatori
 
 ### Metodología
 
-El programa esta implementado en python, y sigue el sig algoritmo
+El programa esta implementado en python, y sigue el siguiente algoritmo:
 
 1. Pide al usuario su nombre y opción (de entre piedra, papel o tijera).
 2. El programa obtiene una opción en base a valores aleatorios, para competir con el usuario.
