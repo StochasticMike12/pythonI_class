@@ -1,26 +1,79 @@
 '''
 NAME
-     at_gc_content.py 
+    
+    contenido_AT_CG.py 
 
 VERSION
-        1.0
+    
+    2.0
 
 AUTHOR
-        Miguel Ángel Flores Varela
+    
+    Miguel Ángel Flores Varela
+
+CONTACT
+
+    mfvarela@lcg.unam.mx
 
 DESCRIPTION
-        Este programa pide la ruta de un archivo con una secuencia de DNA y 
-        arroja el procentaje de AT y GC de la secuencia dada.
+    
+    Este programa pide la ruta de un archivo con una secuencia de DNA y 
+    arroja el procentaje de AT y GC de la secuencia dada.
 
 CATEGORY
-        Genómica
+    
+    Genómica
 
 USAGE
 
-    % py at_gc_content.py
-    
+    % py mk-fasta-format.py <input_file_name> <sequence_name> <output_fasta_name> <fasta_path>     
     
 '''
+
+
+# ===========================================================================
+# =                            imports
+# ===========================================================================
+
+
+# Importar librerías necesarias.
+
+import re
+import argparse
+
+
+
+# ===========================================================================
+# =                            Command Line Options
+# ===========================================================================
+
+
+# Definir los argumentos.
+
+descripcion=(" Este programa toma un archivo de texto plano y un nombre \n", 
+             "para una secuencia de DNA para crear un archivo fasta.")
+parser= argparse.ArgumentParser(description=descripcion)
+
+parser.add_argument('Path',
+                    metavar='path',
+                    type=str,
+                    help='El path del archivo')
+
+parser.add_argument('nombre_secuencia',
+                    type=str,
+                    help='Identificador o nombre de la secuencia')
+
+parser.add_argument('nombre_fasta',
+                    type=str,
+                    help='El nombre del archivo de salida con terminacion sin la terminación .fasta')
+
+parser.add_argument('path_salida',
+                    type=str,
+                    help='El path del archivo donde se guardará el archivo fasta')
+
+# Ejecutar método parse_args()
+args = parser.parse_args()
+
 
 # ===========================================================================
 # =                            main
@@ -71,19 +124,6 @@ try:
         print("El archivo no contiene una secuencia de DNA.")         
 except IOError:
     print("No se encontró el archivo.")
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

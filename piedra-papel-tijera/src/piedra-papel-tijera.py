@@ -33,7 +33,7 @@ USAGE
 import random
 
 
-# Declarar os elementos constantes en el código.
+# Declarar los elementos constantes en el código.
 
 opciones=['tijera','piedra','papel']
 op1 = "tijera"
