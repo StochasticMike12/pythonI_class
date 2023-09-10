@@ -8,7 +8,7 @@ Este repositorio ha sido creado para el curso de Biopython del tercer semestre d
 
 Estudiante del tercer semestre de la Licenciatura en Ciencias Genómicas de la UNAM, generación 20.
 
-**Contacto:** mfvarela@lcg,unam,mx
+**Contacto:** mfvarela@lcg.unam.mx
 
 ## índice de programas
 | No | Programa  | Descripción | Link |
