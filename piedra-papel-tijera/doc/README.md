@@ -1,6 +1,6 @@
 # Pruebas piedra-papel-tijera.py
-Flores Varela Miguel Ángel 
-7 de mayo de 2023
+| *Flores Varela Miguel Ángel* | *9 de septiembre de 2023* |
+|--|--|
 
 ### Introducción
 
@@ -22,9 +22,9 @@ El programa esta implementado en python, y sigue el sig algoritmo
 
 #### Caso 1: El usuario pierde.
 
-Input: 
-Output:
-Descripción:
+- Input: 
+- Output:
+- Descripción:
 
 1. Se ejecuta el programa desde linea de comando
 
@@ -78,9 +78,9 @@ No(n)
 
 #### Caso 2: El usuario pierde
 
-Input: 
-Output:
-Descripción:
+- Input: 
+- Output:
+- Descripción:
 
 1. Se ejecuta el programa desde linea de comando
 
@@ -134,9 +134,9 @@ No(n)
 
 #### Caso 3: El usuario y la computadora quedan empates
 
-Input: 
-Output:
-Descripción:
+- Input: 
+- Output:
+- Descripción:
 
 1. Se ejecuta el programa desde linea de comando
 
