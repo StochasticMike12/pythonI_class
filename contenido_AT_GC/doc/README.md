@@ -19,7 +19,7 @@ El programa está implementado en python, y sigue el siguiente algoritmo:
 
 #### Caso 1: El archivo de secuencia de entrada existe, no está vacío y contiene solo As, Ts, Gs y Cs.
 
-- Input: data/dna.txt
+- Input: data\dna.txt
 - Output:
 - Descripción:
 
@@ -41,7 +41,7 @@ GC: ... %
 
 #### Caso 2: El archivo de secuencia de entrada existe, no está vacío y contiene cualquier otro caracter aparte de As, Ts, Gs y Cs.
 
-- Input: data/dna.txt 
+- Input: data\dna.txt 
 - Output: 
 - Descripción:
 
@@ -59,7 +59,7 @@ El archivo contiene caracteres no válidos.
 
 #### Caso 3: El archivo de secuencia de entrada existe, no está vacío y contiene una secuencia sin As, Ts, Gs y Cs.
 
-- Input: data/dna.txt
+- Input: data\dna.txt
 - Output: 
 - Descripción:
 
@@ -77,7 +77,7 @@ El archivo no contiene una secuencia de DNA.
 
 #### Caso 4: El archivo de secuencia de entrada existe, pero está vacío.
 
-- Input: data/dna.txt
+- Input: data\dna.txt
 - Output: 
 - Descripción:
 
@@ -95,7 +95,7 @@ El archivo está vacío.
 
 #### Caso 5: El archivo de secuencia de entrada no existe.
 
-- Input: data/dna.txt
+- Input: data\dna.txt
 - Output: 
 - Descripción:
 
