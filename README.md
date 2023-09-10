@@ -13,8 +13,8 @@ Estudiante del tercer semestre de la Licenciatura en Ciencias Genómicas de la U
 ## índice de programas
 | No | Programa  | Descripción | Link |
 | -- | -- | -- |--|
-| 1 | contenido_AT_CG.py | Calcula el porcentaje de AT y GC en una secuencia de DNA. | https://acortar.link/RXzJ5n |
-| 2 | conteo_bases.py | Cuenta el número de cada base nitrogenada en una secuencia de DNA. | https://acortar.link/EhYXkI |
-| 3 | piedra-papel-tijera.py | Simula un juego de piedra, papel o tijera contra la computadora. | https://acortar.link/tvRL9G |
-| 4 | posicion_codones.py | Localiza la posición de los codones de inicio y final en una secuencia de DNA. | https://acortar.link/3t5PoB |
-| 5 | txt_a_fasta.py | Convierte una secuencia de dna en formato plano a formato fastA. | https://acortar.link/54L8yV |
+| 1 | contenido_AT_CG.py | Calcula el porcentaje de AT y GC en una secuencia de DNA. | https://acortar.link/oTtV5Q |
+| 2 | conteo_bases.py | Cuenta el número de cada base nitrogenada en una secuencia de DNA. | https://acortar.link/QaVxlw |
+| 3 | piedra-papel-tijera.py | Simula un juego de piedra, papel o tijera contra la computadora. | https://acortar.link/NlirbE |
+| 4 | posicion_codones.py | Localiza la posición de los codones de inicio y final en una secuencia de DNA. | https://acortar.link/OnSCnT |
+| 5 | txt_a_fasta.py | Convierte una secuencia de dna en formato plano a formato fastA. | https://acortar.link/2knw9D |
