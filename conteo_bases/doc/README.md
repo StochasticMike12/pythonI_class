@@ -9,7 +9,7 @@ Contar el número de As, Ts, Gs y Cs es de ayuda en tareas como determinar la es
 
 ### Metodología
 
-El programa esta implementado en python, y sigue el sig algoritmo
+El programa esta implementado en python, y sigue el siguiente algoritmo:
 
 1. El programa recibe desde la línea de comando el path del archivo de entrada donde se encuentra la secuencia de DNA.
 2. Verifica que el archivo exista, que no esté vacío y que contenga solo ATGCs.
