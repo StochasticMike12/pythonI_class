@@ -1,10 +1,10 @@
 '''
 NAME
 
-    txt_a_fasta.py 
+    analisis_fastqs.py 
 
 VERSION
-    2.1
+    1.0.0
 
 AUTHOR
     Miguel Ángel Flores Varela
@@ -15,22 +15,17 @@ CONTACT
 
 DESCRIPTION
 
-    Convierte una secuencia de dna en formato plano a formato fastA.
-     
-    De manera interactiva pide 
-        - la secuencia de dna en formato raw
-        - el nombre de la secuencia o identificador
-        - el nombre del archivo de salida
-          
-    formato raw: la secuencia viene en un solo renglon en el archivo.
+    Este programa procesa archivos FASTQ, permite conocer el número de
+    lecturas con un promedio de calidad mayor o menor (según lo elija 
+    el ususario) a un umbral establecido por el usuario.
 
 CATEGORY
 
-        Genómica
+    Genómica
 
 USAGE
 
-    % py mk-fasta-format.py <path_archivo_de_entrada> <nombre_secuencia> <nombre_archivo_salida> <path_archivo_salida>  
+    % py analisis_fastqs.py <path_archivo_de_entrada> <umbral> <bajo_ubral>
   
 '''
 
@@ -41,9 +36,8 @@ USAGE
 
 # Importar librerías necesarias.
 
-import re
+from Bio import SeqIO
 import argparse
-
 
 
 # ===========================================================================
@@ -52,26 +46,23 @@ import argparse
 
 # Definir los argumentos.
 
-descripcion=(" Este programa toma un archivo de texto plano y un nombre \n", 
-             "para una secuencia de DNA para crear un archivo fasta.")
-parser= argparse.ArgumentParser(description=descripcion)
+parser= argparse.ArgumentParser(description='Este programa procesa archivos FASTQ, permite conocer el número de lecturas con un promedio de calidad mayor o menor (según se elija) a un umbral establecido por el usuario. El programa recibe como primer argumento el path o dirección del archivo de entrada, seguido del umbral sobre el cual se trabajará y como tercer argumento se especifica si se desea obtener las lecturas con un promedio mayor (False) o menor (True) al umbral espesificado.')
 
 parser.add_argument('Path',
                     metavar='path',
                     type=str,
                     help='El path del archivo')
 
-parser.add_argument('nombre_secuencia',
-                    type=str,
-                    help='Identificador o nombre de la secuencia')
+parser.add_argument('Threshold',
+                    metavar='threshold',
+                    type=float,
+                    help='Umbral sobre el cual se analizan las lecturas')
 
-parser.add_argument('nombre_fasta',
+parser.add_argument('Lower',
+                    metavar='lower',
                     type=str,
-                    help='El nombre del archivo de salida con terminacion sin la terminación .fasta')
+                    help='Instrucción para indicar si se quiere obtener las lecturas con promedio de calidad menor al umbral especificado')
 
-parser.add_argument('path_salida',
-                    type=str,
-                    help='El path del archivo donde se guardará el archivo fasta')
 
 # Ejecutar método parse_args()
 args = parser.parse_args()
@@ -81,61 +72,51 @@ args = parser.parse_args()
 # =                            functions
 # ===========================================================================
 
-# Definir función convertidora de txt a fasta.
-
-def txt_a_fasta(nombre_secuencia, nombre_fasta, ruta_fasta):
-    """ Convertir un archivo txt a fasta
-    
-        Parámetros:
-        argument1 (str): nombre de la secuencia de DNA
-        argument2 (str): nombre del archivo fasta
-        argument3 (str): ruta de salida
-        
-        Returns:
-        Crea un archivo fasta
-
-        """
-    ruta_completa_fasta = ruta_fasta + "\\" + nombre_fasta + ".fasta" 
-    archivo_fasta = open(ruta_completa_fasta, "w")
-    archivo_fasta.write(">" + nombre_secuencia + "\n" + secuencia)
-    archivo_fasta.close()
-
 
 
 # ===========================================================================
 # =                            main
 # ===========================================================================
 
-# Definir exepciones.
+# Declarar variables constantes
 
-try:
-    archivo = open(args.Path, "r")
-    secuencia = archivo.read().rstrip("\n")
+threshold=args.Threshold
+lower=args.Lower
+
+accumulated_score=0
+n_filtered_seqs=0
+n_seqs=0
 
 
-    # Verificar que el archivo no esté vacío.
+# Abrir y procesar el archivo
 
-    if not secuencia:
-        print("El archivo está vacío.")
-        archivo.close()
+for record in SeqIO.parse(args.Path, "fastq"):
+    scores=record.letter_annotations["phred_quality"]
+    nt_number=len(scores)
     
-
-    # Verificar que al archivo contenga solo As, Ts, Gs y Cs.
-
-    elif re.search(r"[ATGC]", secuencia):
-        for caracter in secuencia:
-            if (caracter != 'A') and (caracter != 'T') and (caracter != 'G') and (caracter != 'C'): 
-                print("El archivo contiene caracteres no válidos.")
-                archivo.close()
-                break
+    # Calcular promedio de calidad para cada lectura
+    for score in scores:
+        accumulated_score=accumulated_score+score
+    mean_score=accumulated_score/nt_number
     
-        
-    # Convertir archivo .txt a .fasta.
+    # Contar las lecturas de interés de acuerdo al umbral
+    if (lower=='True'):
+        if mean_score<threshold:
+            n_filtered_seqs+=1
+    elif (lower=='False'):
+        if mean_score>threshold:
+            n_filtered_seqs+=1
+    n_seqs+=1
 
-        else:
-            txt_a_fasta(args.nombre_secuencia, args.nombre_fasta, args.path_salida)
-            archivo.close()
-    else:
-        print("El archivo no contiene una secuencia de DNA.")
-except IOError:
-    print("No se encontró el archivo.")
+
+# Definir variables para imprimir mensaje
+
+if lower=='True':
+    seq='menores'
+elif lower=='False':
+    seq='menores'
+
+
+# Imprimir el resultado del conteo
+
+print("Archivo:",args.Path,"\nLecturas:",n_seqs,'\nLecturas', seq,"al umbral:",n_filtered_seqs)
