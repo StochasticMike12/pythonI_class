@@ -88,35 +88,39 @@ n_filtered_seqs=0
 n_seqs=0
 
 
-# Abrir y procesar el archivo
-
-for record in SeqIO.parse(args.Path, "fastq"):
-    scores=record.letter_annotations["phred_quality"]
-    nt_number=len(scores)
+try: 
+    # Abrir y procesar el archivo
+    for record in SeqIO.parse(args.Path, "fastq"):
+        scores=record.letter_annotations["phred_quality"]
+        nt_number=len(scores)
     
-    # Calcular promedio de calidad para cada lectura
-    for score in scores:
-        accumulated_score=accumulated_score+score
-    mean_score=accumulated_score/nt_number
+        # Calcular promedio de calidad para cada lectura
+        for score in scores:
+            accumulated_score=accumulated_score+score
+        mean_score=accumulated_score/nt_number
     
-    # Contar las lecturas de interés de acuerdo al umbral
-    if (lower=='True'):
-        if mean_score<threshold:
-            n_filtered_seqs+=1
-    elif (lower=='False'):
-        if mean_score>threshold:
-            n_filtered_seqs+=1
-    n_seqs+=1
+        # Contar las lecturas de interés de acuerdo al umbral
+        if (lower=='True'):
+            if mean_score<threshold:
+                n_filtered_seqs+=1
+        elif (lower=='False'):
+            if mean_score>threshold:
+                n_filtered_seqs+=1
+        n_seqs+=1
 
 
-# Definir variables para imprimir mensaje
+    # Definir variables para imprimir mensaje
 
-if lower=='True':
-    seq='menores'
-elif lower=='False':
-    seq='menores'
+    if lower=='True':
+        seq='menores'
+    elif lower=='False':
+        seq='menores'
 
 
-# Imprimir el resultado del conteo
+    # Imprimir el resultado del conteo
 
-print("Archivo:",args.Path,"\nLecturas:",n_seqs,'\nLecturas', seq,"al umbral:",n_filtered_seqs)
+    print("\nArchivo:",args.Path,"\nLecturas:",n_seqs,'\nLecturas', seq,"al umbral:",n_filtered_seqs,"\n")
+
+except FileNotFoundError:
+    print("No se encontró el archivo ingresado.")
+
